@@ -35,10 +35,9 @@ public class RoomService {
 
         lobbyWSService.notifyLobby_LobbyRoomRemoved(roomDto);
     }
-    public RoomDto createRoom(LobbyCreateRoomDto createRoomDto) throws Exception {
+    public RoomDto createRoom(LobbyCreateRoomDto createRoomDto, String imageBase64) throws Exception {
         String randomRoomId = randomRoomId();
-
-        Puzzle puzzle = puzzleService.createPuzzle(randomRoomId, createRoomDto.pieces(), createRoomDto.puzzleImageBase64());
+        Puzzle puzzle = puzzleService.createPuzzle(randomRoomId, createRoomDto.pieces(), imageBase64);
 
         Room room = Room.builder()
                 .id(randomRoomId)
