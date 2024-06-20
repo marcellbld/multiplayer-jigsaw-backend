@@ -28,11 +28,14 @@ public class RedisConfig {
     private Integer database;
     @Value("${spring.data.redis.password}")
     private String password;
+    @Value("${spring.data.redis.username}")
+    private String username;
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(host, port);
         config.setDatabase(database);
+        config.setUsername(username);
         config.setPassword(password);
         JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().useSsl().and().usePooling().build();
 
