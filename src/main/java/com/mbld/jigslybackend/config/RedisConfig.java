@@ -26,13 +26,17 @@ public class RedisConfig {
     private Integer port;
     @Value("${spring.data.redis.database}")
     private Integer database;
+    @Value("${spring.data.redis.password}")
+    private String password;
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(host, port);
         config.setDatabase(database);
+        config.setPassword(password);
+        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().useSsl().and().usePooling().build();
 
-        return new JedisConnectionFactory(config);
+        return new JedisConnectionFactory(config, jedisConf);
     }
 
     @Bean
