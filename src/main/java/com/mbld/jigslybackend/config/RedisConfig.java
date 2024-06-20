@@ -16,6 +16,8 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+import java.time.Duration;
+
 @Configuration
 @EnableRedisRepositories("com.mbld.jigslybackend.repositories.redis")
 public class RedisConfig {
@@ -37,8 +39,8 @@ public class RedisConfig {
         config.setDatabase(database);
         config.setUsername(username);
         config.setPassword(password);
-        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().useSsl().and().usePooling().build();
 
+        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().connectTimeout(Duration.ofMillis(60000)).useSsl().and().usePooling().build();
         return new JedisConnectionFactory(config, jedisConf);
     }
 
