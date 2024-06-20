@@ -16,8 +16,7 @@ Please note that this project is created mainly for demo purpose, and is current
 
 ## Demo
 Click [here](https://multiplayer-jigsaw-frontend.onrender.com) to try it out.
-> :warning: Please be aware that this demo is deployed on a free service (render.com), and there might be a delay in loading the backend.
-> Additionally, note that the WebSocket communication delay could be faster in a better hosting environment.
+> :warning: Please be aware that this demo is hosted on a low performance service - delays and interruptions may occur.
 
 Pre-made accounts:
 | Username | Password |
