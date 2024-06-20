@@ -40,7 +40,7 @@ public class RedisConfig {
         config.setUsername(username);
         config.setPassword(password);
 
-        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().connectTimeout(Duration.ofMillis(60000)).useSsl().and().usePooling().build();
+        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().readTimeout(Duration.ofMillis(60000)).connectTimeout(Duration.ofMillis(60000)).useSsl().and().usePooling().build();
         return new JedisConnectionFactory(config, jedisConf);
     }
 
