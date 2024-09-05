@@ -1,4 +1,4 @@
-package com.mbld.jigslybackend.contants;
+package com.mbld.jigslybackend.constants;
 
 public final class PuzzleConstants {
     private PuzzleConstants() {}

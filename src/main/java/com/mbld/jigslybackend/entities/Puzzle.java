@@ -1,6 +1,6 @@
 package com.mbld.jigslybackend.entities;
 
-import com.mbld.jigslybackend.contants.PuzzleConstants;
+import com.mbld.jigslybackend.constants.PuzzleConstants;
 import com.mbld.jigslybackend.utils.MathUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

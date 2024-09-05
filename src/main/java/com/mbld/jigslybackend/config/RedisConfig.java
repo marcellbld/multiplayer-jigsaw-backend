@@ -15,7 +15,13 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import redis.clients.jedis.JedisPoolConfig;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLParameters;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 
 @Configuration
@@ -40,7 +46,9 @@ public class RedisConfig {
         config.setUsername(username);
         config.setPassword(password);
 
-        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().readTimeout(Duration.ofMillis(60000)).connectTimeout(Duration.ofMillis(60000)).useSsl().and().usePooling().build();
+        JedisClientConfiguration jedisConf = JedisClientConfiguration.builder().readTimeout(Duration.ofMillis(60000)).connectTimeout(Duration.ofMillis(60000))
+                .useSsl().and().usePooling()
+                .build();
         return new JedisConnectionFactory(config, jedisConf);
     }
 
