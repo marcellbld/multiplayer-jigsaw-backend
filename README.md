@@ -12,7 +12,7 @@ This project is a multiplayer jigsaw puzzle game built using Spring Boot and Ang
 - **Custom Puzzles**: Players can create custom puzzles, then with the given ID can invite friends or other players can join from the lobby.
 
 ## Work In Progress :warning:
-Please note that this project is created mainly for demo purpose, and is currently in its early stages of development. It's important to note that you may encounter areas where data validation and error handling are not yet to be fully implemented.
+Please note that this project was created for personal demo purposes. It is in the early stages of development, so some parts may be non-functional, minimally functional, or awaiting modification.
 
 ## Demo
 Click [here](https://multiplayer-jigsaw-frontend.onrender.com) to try it out.
