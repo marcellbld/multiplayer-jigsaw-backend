@@ -15,7 +15,7 @@ This project is a multiplayer jigsaw puzzle game built using Spring Boot and Ang
 Please note that this project was created for personal demo purposes. It is in the early stages of development, so some parts may be non-functional, minimally functional, or awaiting modification.
 
 ## Demo
-Click [here](https://multiplayer-jigsaw-frontend.onrender.com) to try it out.
+Click [here](http://000339.xyz/jigsaw) to try it out.
 > :warning: Please be aware that this demo is hosted on a low performance service - delays and interruptions may occur.
 
 Pre-made accounts:
